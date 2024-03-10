@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul , li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* 헤더 상단 고정안댐 */
+}
+header > nav {
+    width: 50%;
+    margin: 0 auto;
+}
+header > nav > ul {
+    display: flex;
+    padding-left: 0;
+}
+header > nav > ul > li {
+    width: 160px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    padding: 2.5px 5px 2.5px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+header > nav > ul > li > a {
+    color: #000;
+    position: relative;
+}
+header > nav > ul > li > a::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -8px;
+    width: 0;
+    height: 4px;
+    background-color: #ff0000;
+    transition: all 0.6s ease-out;
+    
+}
+header > nav > ul > li > a::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: -8px;
+    width: 0;
+    height: 4px;
+    background-color: #ff0000;
+    transition: all 0.6s ease-out;
+}
+header > nav > ul > li > a:hover::after {
+    width: 100%;
+}
+header > nav > ul > li > a:hover::before {
+    width: 0;
+}
+header > nav > ul > li > a:hover {
+    color: #ff0000;
+    transition: all 0.6s ease-out;
+}
+.logo_area {
+    width: 20%;
+    height: 65px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+}
+.logo_area > a {
+    color: #ff0000;
+    font-size: 20px;
+    line-height: 65px;
+    font-weight: bold;
+}
+.slide_container {
+    width: 100%;
+    /* 이부분만 수정하면 슬라이드 크기 변경가능 */
+    overflow: hidden;
+}
+.slide_container > ul {
+    width: 9515px;
+    display: flex;
+    position: relative;
+    animation: 10s infinite linear slide;
+}
+.slide_container > ul > li {
+    width: 1903px;
+}
+.slide_container > ul > li > p {
+    font-size: 40px;
+    position: absolute;
+    top: 400px;
+    color: #fff;
+}
+.slide_container > ul > li > img {
+    width: 100%;
+    height: 67%;
+}
+@keyframes slide {
+    0%{
+        left: 0;
+    }
+    15%{
+        left: 0;
+    }
+    25%{
+        left: -1903px;
+    }
+    40%{
+        left: -1903px;
+    }
+    50%{
+        left: -3806px;
+    }
+    65%{
+        left: -3806px;
+    }
+    75%{
+        left: -5709px;
+    }
+    90%{
+        left: -5709px;
+    }
+    100%{
+        left: -7612px;
+    }
+}
