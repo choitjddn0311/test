@@ -8,18 +8,20 @@ ul , li {
 a {
     text-decoration: none;
 }
-.container {
-    width: 1320px;
-    margin: 0 auto;
-}
-header {
+.header_contain {
     width: 100%;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    background-color: red;
+    margin-bottom: 75px;
+}
+
+header {
+    width: 1320px;
     height: 75px;
     display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.3);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     /* 헤더 상단 고정안댐 */
@@ -90,7 +92,7 @@ header > nav > ul > li > a:hover {
     font-weight: bold;
 }
 .slide_container {
-    width: 100%;
+    width: 1903px;
     /* 이부분만 수정하면 슬라이드 크기 변경가능 */
     overflow: hidden;
 }
